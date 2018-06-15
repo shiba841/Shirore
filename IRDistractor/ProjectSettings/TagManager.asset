@@ -7,6 +7,7 @@ TagManager:
   - Goal
   - Wall
   - SafeCircle
+  - Distractor
   layers:
   - Default
   - TransparentFX

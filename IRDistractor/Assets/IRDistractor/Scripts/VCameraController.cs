@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Attached to Virtual Camera
 public class VCameraController : MonoBehaviour {
 
 	public GameObject VE;

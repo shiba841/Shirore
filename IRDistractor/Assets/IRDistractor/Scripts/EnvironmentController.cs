@@ -2,9 +2,10 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Attached to Virtual Environment
 public class EnvironmentController : MonoBehaviour {
 
-public GameObject player;
+public GameObject vPlayer;
 
 	// Use this for initialization
 	void Start () {
@@ -15,7 +16,7 @@ public GameObject player;
 	void Update () {
 		if (Input.GetMouseButton(0)) {
 			float rot = Input.GetAxis("Mouse X");
-			Vector3 center = player.transform.position;
+			Vector3 center = vPlayer.transform.position;
 
 			transform.RotateAround(center, transform.up, rot);
 		}

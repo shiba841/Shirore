@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
+// Attached to Virtual Player and Real Player
 public class PlayerCollisionDetector : MonoBehaviour {
 
 	private PlayerController playerController;
@@ -19,6 +20,11 @@ public class PlayerCollisionDetector : MonoBehaviour {
 
 	private void OnCollisionEnter(Collision other) {
 		//Debug.Log(transform.name + " Collided");
-		playerController.OnPlayerCollided(other);
+		playerController.OnPlayerCollisionEnter(other);
 	}
+
+	private void OnCollisionExit(Collision other) {
+		playerController.OnPlayerCollisionExit(other);
+	}
+
 }
