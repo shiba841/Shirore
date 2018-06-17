@@ -23,8 +23,12 @@ public class PlayerCollisionDetector : MonoBehaviour {
 		playerController.OnPlayerCollisionEnter(other);
 	}
 
-	private void OnCollisionExit(Collision other) {
-		playerController.OnPlayerCollisionExit(other);
+	private void OnTriggerEnter(Collider other) {
+		playerController.OnPlayerTriggerEnter(other);
+	}
+
+	private void OnTriggerExit(Collider other) {
+		playerController.OnPlayerTriggerExit(other);
 	}
 
 }
