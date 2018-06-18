@@ -1417,11 +1417,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 878d52cb790e841408518331d3230047, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  rotateTime: 1
+  FieldOfView: 90
   VE: {fileID: 1259548409}
   RE: {fileID: 2049225756}
   vPlayer: {fileID: 3850404}
   rPlayer: {fileID: 1521609625}
-  rotateTime: 1
 --- !u!1 &1259548408
 GameObject:
   m_ObjectHideFlags: 0
@@ -2034,7 +2035,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 0.01
-  rotateTime: 0.5
+  rotateTime: 0.25
   VE: {fileID: 1259548408}
   RE: {fileID: 2049225755}
   distractor: {fileID: 1202083221}
@@ -2380,7 +2381,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2129012031}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7, y: 0.5, z: -7}
+  m_LocalPosition: {x: -5, y: 0.5, z: -5}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.05}
   m_Children: []
   m_Father: {fileID: 1259548409}

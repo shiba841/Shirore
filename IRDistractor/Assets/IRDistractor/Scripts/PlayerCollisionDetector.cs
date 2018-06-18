@@ -9,8 +9,7 @@ public class PlayerCollisionDetector : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		GameObject pController = gameObject.transform.parent.gameObject;
-		playerController = pController.GetComponent<PlayerController>();
+		playerController = gameObject.transform.parent.GetComponent<PlayerController>();
 	}
 	
 	// Update is called once per frame

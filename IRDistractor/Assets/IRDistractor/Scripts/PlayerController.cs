@@ -68,8 +68,8 @@ public class PlayerController : MonoBehaviour {
 		}
 		// Distractor is active
 		else {
-			vPlayer.position += vPlayer.forward * (speed/5);
-			rPlayer.position += rPlayer.forward * (speed/5);
+			vPlayer.position += vPlayer.forward * (speed/10);
+			rPlayer.position += rPlayer.forward * (speed/10);
 
 			// Keep looking at distractor
 			Vector3 vPlayerToDist = new Vector3(distractor.transform.position.x, 0.0f, distractor.transform.position.z)
@@ -81,27 +81,21 @@ public class PlayerController : MonoBehaviour {
 		
 	}
 
-	public float getNextDirection () {
-		return nextDir;
-	}
-
-	public float getRotateTime () {
-		return rotateTime;
-	}
-
 	public void OnPlayerCollisionEnter (Collision other) {
 		string colTag = other.gameObject.transform.parent.tag;
 		//Debug.Log("get collision " + colTag);
 		if (colTag.Equals("Wall") || colTag.Equals("Goal")) {
 			//Debug.Log(transform.name + " collided with " + colTag);
-			Init();
+
+			// Always init environment -> player order
 			environmentController.Init();
+			Init();
 		}
 	}
 
 	public void OnPlayerTriggerEnter (Collider other) {
 		string colTag = other.gameObject.transform.parent.tag;
-		if (colTag.Equals("SafeCircle")) {
+		if (colTag.Equals("SafeCircle") && environmentController.isLookAtGoal()) {
 			distractor.SetActive(false);
 		}
 	}
@@ -125,4 +119,11 @@ public class PlayerController : MonoBehaviour {
 		rPlayer.rotation = vStart.transform.rotation;
 	}
 
+	public float getNextDirection () {
+		return nextDir;
+	}
+
+	public float getRotateTime () {
+		return rotateTime;
+	}
 }
