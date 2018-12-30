@@ -59,7 +59,7 @@ static class Permutation<T> {
         }
         else {
             WriteLine("num of select is too large");
-            return combs;
+            return perms;
         }
     }
 }
