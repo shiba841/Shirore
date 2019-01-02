@@ -7,10 +7,11 @@ public class Cuttable : MonoBehaviour {
 
 	private List<Rigidbody> pieces;
 	private int childCount;
+	private int cutCount = 0;
 
 	// Use this for initialization
 	void Start () {
-		getPieces();
+		GetPieces();
 	}
 	
 	// Update is called once per frame
@@ -18,7 +19,18 @@ public class Cuttable : MonoBehaviour {
 		
 	}
 
-	private void getPieces () {
+	private void OnTriggerExit (Collider other) {
+		if (cutCount < childCount && other.gameObject.tag.Equals("Blade")) {
+			pieces[cutCount].isKinematic = false;
+			cutCount++;
+		}
+	}
+
+	private void CutOff () {
+
+	}
+
+	private void GetPieces () {
 		childCount = this.transform.childCount;
 		pieces = new List<Rigidbody>();
 
