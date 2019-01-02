@@ -21,14 +21,19 @@ public class Cuttable : MonoBehaviour {
 
 	private void OnTriggerExit (Collider other) {
 		if (cutCount < childCount && other.gameObject.tag.Equals("Blade")) {
-			CutOff();
+			var force = other.transform.parent.GetComponent<Rigidbody>().velocity;
+			CutOff(pieces[cutCount], force);
 		}
 	}
 
-	private void CutOff () {
-		pieces[cutCount].transform.parent = null;
-		pieces[cutCount].GetComponent<Rigidbody>().isKinematic = false;
-		pieces[cutCount].GetComponent<BoxCollider>().enabled = true;
+	private void CutOff (GameObject piece, Vector3 force) {
+		var rb = piece.GetComponent<Rigidbody>();
+		var bc = piece.GetComponent<BoxCollider>();
+		Debug.Log(force);
+		piece.transform.parent = null;
+		rb.isKinematic = false;
+		rb.AddForce(force, ForceMode.Impulse);
+		bc.enabled = true;
 		cutCount++;
 	}
 
@@ -38,7 +43,6 @@ public class Cuttable : MonoBehaviour {
 
 		foreach (Transform child in this.transform) {
 			pieces.Add(child.gameObject);
-			Debug.Log(child.name);
 		}
 	}
 }
