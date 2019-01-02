@@ -21,14 +21,15 @@ public class Cuttable : MonoBehaviour {
 
 	private void OnTriggerExit (Collider other) {
 		if (cutCount < childCount && other.gameObject.tag.Equals("Blade")) {
-			pieces[cutCount].GetComponent<Rigidbody>().isKinematic = false;
-			pieces[cutCount].GetComponent<BoxCollider>().enabled = true;
-			cutCount++;
+			CutOff();
 		}
 	}
 
 	private void CutOff () {
-
+		pieces[cutCount].transform.parent = null;
+		pieces[cutCount].GetComponent<Rigidbody>().isKinematic = false;
+		pieces[cutCount].GetComponent<BoxCollider>().enabled = true;
+		cutCount++;
 	}
 
 	private void GetPieces () {
