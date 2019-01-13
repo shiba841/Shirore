@@ -584,7 +584,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4787443089229170, guid: e09b9230db181404f8f210a5246abe7c, type: 2}
       propertyPath: m_LocalPosition.x
-      value: 0
+      value: -1.02
       objectReference: {fileID: 0}
     - target: {fileID: 4787443089229170, guid: e09b9230db181404f8f210a5246abe7c, type: 2}
       propertyPath: m_LocalPosition.y
@@ -613,11 +613,6 @@ Prefab:
     - target: {fileID: 4787443089229170, guid: e09b9230db181404f8f210a5246abe7c, type: 2}
       propertyPath: m_RootOrder
       value: 15
-      objectReference: {fileID: 0}
-    - target: {fileID: 137480838870792716, guid: e09b9230db181404f8f210a5246abe7c,
-        type: 2}
-      propertyPath: m_Enabled
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e09b9230db181404f8f210a5246abe7c, type: 2}
@@ -766,7 +761,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!64 &1111616482
 MeshCollider:
   m_ObjectHideFlags: 0
