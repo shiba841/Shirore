@@ -53,7 +53,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   name: WoodBow
   packageType: 2
-  itemPrefab: {fileID: 1469582854659124, guid: e09b9230db181404f8f210a5246abe7c, type: 2}
+  itemPrefab: {fileID: 1128028181393756, guid: e09b9230db181404f8f210a5246abe7c, type: 2}
   otherHandItemPrefab: {fileID: 187848, guid: d410d7126dd411c4ea651fc94eae9202, type: 2}
   previewPrefab: {fileID: 1896001840108428, guid: 729722d2b2b5e7947952046731a95449,
     type: 2}
