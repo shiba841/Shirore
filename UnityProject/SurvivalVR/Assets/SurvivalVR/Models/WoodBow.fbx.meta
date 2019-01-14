@@ -43,7 +43,17 @@ ModelImporter:
     7400000: bowPull
     9500000: //RootNode
     13700000: bow
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: Bow_body
+    second: {fileID: 2100000, guid: 216d6255cb2d43c4b85c75cfcacd9924, type: 2}
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: String
+    second: {fileID: 2100000, guid: a1f72a3bca4bb5942b721410ad2c92ab, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
