@@ -3,56 +3,47 @@ guid: 311c59c29fd704e43a43b9eea87b37a7
 ModelImporter:
   serializedVersion: 23
   fileIDToRecycleName:
-    100000: Armature
-    100002: Bone
-    100004: Bone.001_L
-    100006: Bone.001_L.001
-    100008: Bone.001_L.002
-    100010: Bone.001_L.003
-    100012: Bone.001_L.004
-    100014: Bone.001_L.004_end
-    100016: Bone.001_R
-    100018: Bone.001_R.001
-    100020: Bone.001_R.002
-    100022: Bone.001_R.003
-    100024: Bone.001_R.004
-    100026: Bone.001_R.004_end
-    100028: Bone_end
+    100000: Bone
+    100002: Bone_end
+    100004: Bone_L
+    100006: Bone_L_1
+    100008: Bone_L_2
+    100010: Bone_L_3
+    100012: Bone_L_4
+    100014: Bone_L_4_end
+    100016: Bone_R
+    100018: Bone_R_1
+    100020: Bone_R_2
+    100022: Bone_R_3
+    100024: Bone_R_4
+    100026: Bone_R_4_end
+    100028: Bow
     100030: //RootNode
     100032: bow
-    400000: Armature
-    400002: Bone
-    400004: Bone.001_L
-    400006: Bone.001_L.001
-    400008: Bone.001_L.002
-    400010: Bone.001_L.003
-    400012: Bone.001_L.004
-    400014: Bone.001_L.004_end
-    400016: Bone.001_R
-    400018: Bone.001_R.001
-    400020: Bone.001_R.002
-    400022: Bone.001_R.003
-    400024: Bone.001_R.004
-    400026: Bone.001_R.004_end
-    400028: Bone_end
+    400000: Bone
+    400002: Bone_end
+    400004: Bone_L
+    400006: Bone_L_1
+    400008: Bone_L_2
+    400010: Bone_L_3
+    400012: Bone_L_4
+    400014: Bone_L_4_end
+    400016: Bone_R
+    400018: Bone_R_1
+    400020: Bone_R_2
+    400022: Bone_R_3
+    400024: Bone_R_4
+    400026: Bone_R_4_end
+    400028: Bow
     400030: bow
     400032: //RootNode
-    2100000: string
-    2100002: bow_body
+    2100000: String
+    2100002: Bow_body
     4300000: bow
+    7400000: Bow|bowpull
     9500000: //RootNode
     13700000: bow
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: bow_body
-    second: {fileID: 2100000, guid: 216d6255cb2d43c4b85c75cfcacd9924, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: string
-    second: {fileID: 2100000, guid: a1f72a3bca4bb5942b721410ad2c92ab, type: 2}
+  externalObjects: {}
   materials:
     importMaterials: 1
     materialName: 0
@@ -103,7 +94,7 @@ ModelImporter:
     secondaryUVHardAngle: 88
     secondaryUVPackMargin: 4
     useFileScale: 1
-    previousCalculatedGlobalScale: 0.00064999994
+    previousCalculatedGlobalScale: 0.01
     hasPreviousCalculatedGlobalScale: 1
   tangentSpace:
     normalSmoothAngle: 60
