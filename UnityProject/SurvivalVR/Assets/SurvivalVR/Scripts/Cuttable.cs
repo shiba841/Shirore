@@ -21,7 +21,8 @@ public class Cuttable : MonoBehaviour {
 
 	private void OnTriggerExit (Collider other) {
 		if (cutCount < childCount && other.gameObject.tag.Equals("Blade")) {
-			var force = other.transform.parent.GetComponent<Rigidbody>().velocity;
+			// var force = other.transform.parent.GetComponent<Rigidbody>().velocity;
+			var force = new Vector3(0f, 0f, 0f);
 			CutOff(pieces[cutCount], force);
 		}
 	}
