@@ -286,7 +286,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d85480da87762944399dab6c99985eef, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrowPrefab: {fileID: 173732, guid: 81fc1450441aca64e8cc1a0e14b1aa77, type: 2}
+  arrowPrefab: {fileID: 1053000061331902, guid: 090a175d544c9eb4696845a965e0f1fb,
+    type: 2}
   arrowNockTransform: {fileID: 4240345817175504}
   nockDistance: 0.1
   lerpCompleteDistance: 0.08
