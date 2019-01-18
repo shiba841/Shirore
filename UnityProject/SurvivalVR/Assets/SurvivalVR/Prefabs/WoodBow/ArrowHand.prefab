@@ -293,7 +293,7 @@ MonoBehaviour:
   lerpCompleteDistance: 0.08
   rotationLerpThreshold: 0.15
   positionLerpThreshold: 0.15
-  arrowSpawnSound: {fileID: 0}
+  arrowSpawnSound: {fileID: 114386027209414136}
   maxArrowCount: 10
 --- !u!114 &114262729333605560
 MonoBehaviour:
@@ -343,9 +343,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   activateActionSetOnAttach: {fileID: 0}
-  hideHandOnAttach: 1
+  hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
-  hideControllerOnAttach: 0
+  hideControllerOnAttach: 1
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
   useHandObjectAttachmentPoint: 1

@@ -54,7 +54,8 @@ MonoBehaviour:
   name: WoodBow
   packageType: 2
   itemPrefab: {fileID: 1128028181393756, guid: e09b9230db181404f8f210a5246abe7c, type: 2}
-  otherHandItemPrefab: {fileID: 187848, guid: d410d7126dd411c4ea651fc94eae9202, type: 2}
+  otherHandItemPrefab: {fileID: 1381297797277292, guid: 4aeac19a66eecb845bd4239375d3d5e0,
+    type: 2}
   previewPrefab: {fileID: 1896001840108428, guid: 729722d2b2b5e7947952046731a95449,
     type: 2}
   fadedPreviewPrefab: {fileID: 1865700542069994, guid: 39d4ee90c2b237a4e91390e5e663d731,
