@@ -7,7 +7,7 @@ public class Craftable : MonoBehaviour {
 	[System.Serializable]
 	private class CraftableClass {
 		public GameObject material;
-		public Collider attachPoint;
+		public Transform attachPoint;
 		private bool attached = false;
 
 		public bool Attached {
@@ -20,23 +20,28 @@ public class Craftable : MonoBehaviour {
 
 	List<GameObject> attachedMaterials;
 
-	private void Update () {
-		foreach (var mat in attachedMaterials) {
-			
-		}
+	private void Start() {
+		attachedMaterials = new List<GameObject>();
 	}
 
-	private void OnTriggerEnter (Collider other) {
-		GameObject attachedObj = other.gameObject;
+	private void Update () {
+
+	}
+
+	public void AttachMaterial (GameObject attachObj) {
 		foreach (var c in craft) {
-			if (!c.Attached && attachedObj.Equals(c.material)) {
-				attachedMaterials.Add(attachedObj);
+			if (!c.Attached && c.material.Equals(attachObj)) {
+				attachedMaterials.Add(attachObj);
+				attachObj.transform.parent = c.attachPoint;
+				attachObj.transform.position = c.attachPoint.position;
+				attachObj.transform.rotation = c.attachPoint.rotation;
 				c.Attached = true;
+				break;
 			}
 		}
 	}
 
-	private void OnTriggerExit (Collider other) {
+	public void DetachMaterial (Collider other) {
 		
 	}
 
