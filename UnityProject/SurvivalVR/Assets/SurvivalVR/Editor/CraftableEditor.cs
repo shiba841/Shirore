@@ -17,16 +17,7 @@ public class CraftableEditor : Editor {
 
 	public override void OnInspectorGUI () {
 		serializedObject.Update();
-
-		EditorGUILayout.PropertyField(craftableClass);
-
-		if (craftableClass.isExpanded) {
-			EditorGUI.indentLevel++;
-			EditorGUILayout.PropertyField(material);
-			EditorGUILayout.PropertyField(need);
-			EditorGUI.indentLevel--;
-		}
-
+		EditorGUILayout.PropertyField(craftableClass, true);
 		serializedObject.ApplyModifiedProperties();
 	}
 }

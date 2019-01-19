@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-// Attach to Pieces GameObject that is parent of pieces
 public class Cuttable : MonoBehaviour {
 
+	public GameObject cuttableObject;
+
+	private Craftable craftable;
 	private List<GameObject> pieces;
 	private int childCount;
 	private int cutCount = 0;
@@ -12,6 +14,7 @@ public class Cuttable : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		GetPieces();
+		craftable = this.GetComponent<Craftable>();
 	}
 	
 	// Update is called once per frame
@@ -20,7 +23,7 @@ public class Cuttable : MonoBehaviour {
 	}
 
 	private void OnTriggerExit (Collider other) {
-		if (cutCount < childCount && other.gameObject.tag.Equals("Blade")) {
+		if (!craftable.Processed && other.gameObject.tag.Equals("Blade")) {
 			// var force = other.transform.parent.GetComponent<Rigidbody>().velocity;
 			var force = new Vector3(0f, 0f, 0f);
 			CutOff(pieces[cutCount], force);
@@ -30,19 +33,22 @@ public class Cuttable : MonoBehaviour {
 	private void CutOff (GameObject piece, Vector3 force) {
 		var rb = piece.GetComponent<Rigidbody>();
 		var bc = piece.GetComponent<BoxCollider>();
-		Debug.Log(force);
+		// Debug.Log(force);
 		piece.transform.parent = null;
 		rb.isKinematic = false;
 		rb.AddForce(force, ForceMode.Impulse);
 		bc.enabled = true;
 		cutCount++;
+		if (cutCount == childCount) {
+			craftable.Processed = true;
+		}
 	}
 
 	private void GetPieces () {
-		childCount = this.transform.childCount;
+		childCount = cuttableObject.transform.childCount;
 		pieces = new List<GameObject>();
 
-		foreach (Transform child in this.transform) {
+		foreach (Transform child in cuttableObject.transform) {
 			pieces.Add(child.gameObject);
 		}
 	}

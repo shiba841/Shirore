@@ -10,5 +10,15 @@ public class Craftable : MonoBehaviour {
 		[SerializeField] int need;
 	}
 
-	[SerializeField] CraftableClass craftableClass;
+	[SerializeField] CraftableClass[] craftableClass;
+
+	
+
+
+	private bool processed = false;
+
+	public bool Processed {
+		get { return processed; }
+		set { processed = value; }
+	}
 }

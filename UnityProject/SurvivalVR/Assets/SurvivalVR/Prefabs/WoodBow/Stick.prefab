@@ -43,6 +43,8 @@ GameObject:
   - component: {fileID: 114545688324990014}
   - component: {fileID: 114360922556905636}
   - component: {fileID: 114190212425035230}
+  - component: {fileID: 114692170110667984}
+  - component: {fileID: 114061350321161046}
   m_Layer: 0
   m_Name: Stick
   m_TagString: Untagged
@@ -95,7 +97,6 @@ GameObject:
   m_Component:
   - component: {fileID: 4096985034252432}
   - component: {fileID: 65612156966366558}
-  - component: {fileID: 114672247256491938}
   m_Layer: 0
   m_Name: Pieces
   m_TagString: Untagged
@@ -586,8 +587,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 0.012, y: 0.095, z: 0.011}
-  m_Center: {x: 0, y: 0.153, z: 0}
+  m_Size: {x: 0.012, y: 0.098, z: 0.011}
+  m_Center: {x: 0, y: 0.151, z: 0}
 --- !u!65 &65781372901751874
 BoxCollider:
   m_ObjectHideFlags: 1
@@ -612,6 +613,21 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.007071062, y: 0.036314946, z: 0.004969292}
   m_Center: {x: 0, y: 0.15613364, z: 0.002484633}
+--- !u!114 &114061350321161046
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1234065687665692}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0d1fdc2dedf2e34a91bbd42a6f6d378, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  craftableClass:
+    material: {fileID: 1287915146295686, guid: 2350034a7c43ad44b83f69f55cc391f8, type: 2}
+    need: 0
+  processed: 0
 --- !u!114 &114190212425035230
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -705,17 +721,18 @@ MonoBehaviour:
   handFollowTransformRotation: 0
   highlightOnHover: 1
   hideHighlight: []
---- !u!114 &114672247256491938
+--- !u!114 &114692170110667984
 MonoBehaviour:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1703595093570646}
+  m_GameObject: {fileID: 1234065687665692}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 233b4c2e4b42a9946826fd93087c9afc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  cuttableObject: {fileID: 1703595093570646}
 --- !u!136 &136030172978357324
 CapsuleCollider:
   m_ObjectHideFlags: 1
