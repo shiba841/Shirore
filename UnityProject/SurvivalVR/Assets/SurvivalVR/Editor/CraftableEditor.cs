@@ -9,7 +9,7 @@ public class CraftableEditor : Editor {
 	SerializedProperty craftableClass;
 
 	private void OnEnable () {
-		craftableClass = serializedObject.FindProperty("craftableClass");
+		craftableClass = serializedObject.FindProperty("craft");
 	}
 
 	public override void OnInspectorGUI () {

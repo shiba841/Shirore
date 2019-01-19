@@ -10,9 +10,11 @@ public class Craftable : MonoBehaviour {
 		[SerializeField] Collider attachPoint;
 	}
 
-	[SerializeField] CraftableClass[] craftableClass;
+	[SerializeField] CraftableClass[] craft;
 
-	
+	private void Update () {
+		
+	}
 
 
 	private bool processed = false;
