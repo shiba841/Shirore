@@ -625,9 +625,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   craftableClass:
-    material: {fileID: 1287915146295686, guid: 2350034a7c43ad44b83f69f55cc391f8, type: 2}
-    need: 0
-  processed: 0
+  - material: {fileID: 1173858698370848, guid: 70ca44193564b1f479c74f985d347cf5, type: 2}
+    need: 2
 --- !u!114 &114190212425035230
 MonoBehaviour:
   m_ObjectHideFlags: 1
