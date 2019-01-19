@@ -649,7 +649,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1979769498850304}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.05, z: 0.01}
@@ -709,7 +709,7 @@ BoxCollider:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1876192364906144}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.01, y: 0.05, z: 0.01}
@@ -737,9 +737,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d0d1fdc2dedf2e34a91bbd42a6f6d378, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  craftableClass:
+  craft:
   - material: {fileID: 1173858698370848, guid: 70ca44193564b1f479c74f985d347cf5, type: 2}
-    need: 2
+    attachPoint: {fileID: 65909939469174934}
+  - material: {fileID: 1173858698370848, guid: 70ca44193564b1f479c74f985d347cf5, type: 2}
+    attachPoint: {fileID: 65314622068613256}
 --- !u!114 &114190212425035230
 MonoBehaviour:
   m_ObjectHideFlags: 1
