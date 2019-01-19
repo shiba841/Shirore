@@ -7,12 +7,9 @@ using UnityEditor;
 public class CraftableEditor : Editor {
 
 	SerializedProperty craftableClass;
-	SerializedProperty material, need;
 
 	private void OnEnable () {
 		craftableClass = serializedObject.FindProperty("craftableClass");
-		material = craftableClass.FindPropertyRelative("material");
-		need = craftableClass.FindPropertyRelative("need");
 	}
 
 	public override void OnInspectorGUI () {
