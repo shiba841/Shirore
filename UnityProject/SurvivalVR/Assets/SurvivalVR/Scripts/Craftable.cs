@@ -17,7 +17,7 @@ public class Craftable : MonoBehaviour {
 	}
 
 	[SerializeField] CraftableClass[] craft;
-	[SerializeField] GameObject craftItem;
+	[SerializeField, Space(15)] GameObject craftItem;
 
 	List<GameObject> attachedMaterials;
 
@@ -30,10 +30,8 @@ public class Craftable : MonoBehaviour {
 	}
 
 	public void IsAttachable (GameObject attachObj) {
-		var rootObj = attachObj.transform.root;
-
-		if (rootObj.tag.Equals("Item")) {
-			var attachObjID = attachObj.transform.root.GetComponent<Item>().ID;
+		if (attachObj.tag.Equals("Item")) {
+			var attachObjID = attachObj.transform.GetComponent<Item>().ID;
 			foreach (var c in craft) {
 				var materialID = c.material.GetComponent<Item>().ID;
 				if (!c.Attached && materialID.Equals(attachObjID)) {
@@ -42,7 +40,10 @@ public class Craftable : MonoBehaviour {
 					break;
 				}
 			}
+
+			IsCraftCompleted();
 		}
+
 	}
 
 	private void AttachMaterial (GameObject attachObj, Transform attachPoint) {
@@ -50,6 +51,7 @@ public class Craftable : MonoBehaviour {
 		attachObj.transform.position = attachPoint.position;
 		attachObj.transform.rotation = attachPoint.rotation;
 		attachObj.transform.parent = attachPoint;
+
 		var rb = attachObj.GetComponent<Rigidbody>();
 		rb.useGravity = false;
 		rb.isKinematic = true;
@@ -57,6 +59,14 @@ public class Craftable : MonoBehaviour {
 
 	public void DetachMaterial (Collider other) {
 		
+	}
+
+	private void IsCraftCompleted () {
+		if (craft.Length == attachedMaterials.Count && Processed) {
+			var crafted = Instantiate(craftItem, this.transform.position, this.transform.rotation);
+			crafted.transform.parent = this.transform.parent;
+			Destroy(this.gameObject);
+		}
 	}
 
 	private bool processed = false;
