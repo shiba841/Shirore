@@ -53,8 +53,10 @@ public class Craftable : MonoBehaviour {
 		attachObj.transform.parent = attachPoint;
 
 		var rb = attachObj.GetComponent<Rigidbody>();
+		var col = attachObj.GetComponent<BoxCollider>();
 		rb.useGravity = false;
 		rb.isKinematic = true;
+		col.enabled = false;
 	}
 
 	public void DetachMaterial (Collider other) {
@@ -64,7 +66,6 @@ public class Craftable : MonoBehaviour {
 	private void IsCraftCompleted () {
 		if (craft.Length == attachedMaterials.Count && Processed) {
 			var crafted = Instantiate(craftItem, this.transform.position, this.transform.rotation);
-			crafted.transform.parent = this.transform.parent;
 			Destroy(this.gameObject);
 		}
 	}
@@ -73,6 +74,9 @@ public class Craftable : MonoBehaviour {
 
 	public bool Processed {
 		get { return processed; }
-		set { processed = value; }
+		set {
+			processed = value;
+			IsCraftCompleted();
+		}
 	}
 }

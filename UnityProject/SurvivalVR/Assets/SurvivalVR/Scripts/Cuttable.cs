@@ -36,6 +36,7 @@ public class Cuttable : MonoBehaviour {
 		// Debug.Log(force);
 		piece.transform.parent = null;
 		rb.isKinematic = false;
+		rb.useGravity = true;
 		rb.AddForce(force, ForceMode.Impulse);
 		bc.enabled = true;
 		cutCount++;
