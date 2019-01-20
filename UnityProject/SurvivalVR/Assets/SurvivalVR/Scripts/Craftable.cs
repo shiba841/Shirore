@@ -17,6 +17,7 @@ public class Craftable : MonoBehaviour {
 	}
 
 	[SerializeField] CraftableClass[] craft;
+	[SerializeField] GameObject CraftItem;
 
 	List<GameObject> attachedMaterials;
 
@@ -28,17 +29,30 @@ public class Craftable : MonoBehaviour {
 
 	}
 
-	public void AttachMaterial (GameObject attachObj) {
-		foreach (var c in craft) {
-			if (!c.Attached && c.material.Equals(attachObj)) {
-				attachedMaterials.Add(attachObj);
-				attachObj.transform.parent = c.attachPoint;
-				attachObj.transform.position = c.attachPoint.position;
-				attachObj.transform.rotation = c.attachPoint.rotation;
-				c.Attached = true;
-				break;
+	public void IsAttachable (GameObject attachObj) {
+		var rootObj = attachObj.transform.root;
+
+		if (rootObj.tag.Equals("Item")) {
+			var attachObjID = attachObj.transform.root.GetComponent<Item>().ID;
+			foreach (var c in craft) {
+				var materialID = c.material.GetComponent<Item>().ID;
+				if (!c.Attached && materialID.Equals(attachObjID)) {
+					AttachMaterial(attachObj, c.attachPoint);
+					c.Attached = true;
+					break;
+				}
 			}
 		}
+	}
+
+	private void AttachMaterial (GameObject attachObj, Transform attachPoint) {
+		attachedMaterials.Add(attachObj);
+		attachObj.transform.position = attachPoint.position;
+		attachObj.transform.rotation = attachPoint.rotation;
+		attachObj.transform.parent = attachPoint;
+		var rb = attachObj.GetComponent<Rigidbody>();
+		rb.useGravity = false;
+		rb.isKinematic = true;
 	}
 
 	public void DetachMaterial (Collider other) {

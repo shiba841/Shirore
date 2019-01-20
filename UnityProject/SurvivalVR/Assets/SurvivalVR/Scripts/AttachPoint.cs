@@ -11,7 +11,7 @@ public class AttachPoint : MonoBehaviour {
 	}
 
 	private void OnTriggerEnter (Collider other) {
-		craftable.AttachMaterial(other.gameObject);
+		craftable.IsAttachable(other.gameObject);
 	}
 
 	private void OnTriggerExit (Collider other) {

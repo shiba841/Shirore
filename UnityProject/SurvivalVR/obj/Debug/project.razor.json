@@ -1,6 +1,6 @@
 {
-  "ProjectFilePath": "e:\\GitHub\\Shirore\\UnityProject\\SurvivalVR\\Assembly-CSharp.csproj",
-  "TargetFramework": "v3.5",
+  "ProjectFilePath": "e:\\GitHub\\Shirore\\UnityProject\\SurvivalVR\\Assembly-CSharp-Editor.csproj",
+  "TargetFramework": "v4.7.1",
   "TagHelpers": [],
   "Configuration": {
     "ConfigurationName": "UnsupportedRazor",
