@@ -70,9 +70,10 @@ GameObject:
   - component: {fileID: 114163777136052880}
   - component: {fileID: 65055157234169334}
   - component: {fileID: 54345559685999478}
+  - component: {fileID: 114662958669202468}
   m_Layer: 0
   m_Name: WoodArrow
-  m_TagString: projectile
+  m_TagString: Item
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -1550,6 +1551,19 @@ MonoBehaviour:
   pitchMin: 0.98
   pitchMax: 1
   playOnAwake: 0
+--- !u!114 &114662958669202468
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1053000061331902}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5840f7c67c0249e4290aeabed614ff65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 004
+  name: woodarrow
 --- !u!114 &114774399072291956
 MonoBehaviour:
   m_ObjectHideFlags: 1

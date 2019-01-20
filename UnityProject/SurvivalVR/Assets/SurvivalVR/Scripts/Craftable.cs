@@ -17,7 +17,7 @@ public class Craftable : MonoBehaviour {
 	}
 
 	[SerializeField] CraftableClass[] craft;
-	[SerializeField] GameObject CraftItem;
+	[SerializeField] GameObject craftItem;
 
 	List<GameObject> attachedMaterials;
 
