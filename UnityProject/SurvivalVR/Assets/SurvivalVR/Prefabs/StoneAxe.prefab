@@ -56,7 +56,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4499679610627596}
   m_Layer: 0
-  m_Name: GripPoint
+  m_Name: GrabPosition
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
