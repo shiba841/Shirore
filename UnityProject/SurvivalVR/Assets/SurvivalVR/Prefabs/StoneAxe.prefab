@@ -74,6 +74,7 @@ GameObject:
   - component: {fileID: 114460218012475828}
   - component: {fileID: 114301684869657188}
   - component: {fileID: 114572924708598190}
+  - component: {fileID: 114915711417881976}
   m_Layer: 0
   m_Name: StoneAxe
   m_TagString: Item
@@ -343,7 +344,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 44
+  attachmentFlags: 84
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
@@ -425,3 +426,14 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!114 &114915711417881976
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1650635675258634}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62dab5d3742261746b2f197b58595626, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
