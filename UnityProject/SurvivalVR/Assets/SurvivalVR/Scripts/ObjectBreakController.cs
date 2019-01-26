@@ -31,10 +31,17 @@ public class ObjectBreakController : MonoBehaviour {
 		}
 
 		if (Durability <= 0f) {
-			var rb = this.GetComponent<Rigidbody>();
-			rb.isKinematic = false;
-			rb.useGravity = true;
+			if (objType == ObjectType.wood) {
+				TreeFelling();
+			}
 		}
+	}
+
+	private void TreeFelling () {
+		var rb = this.GetComponent<Rigidbody>();
+		rb.isKinematic = false;
+		rb.useGravity = true;
+		Destroy(this.gameObject, 7f);
 	}
 
 	public float Durability { get; private set;	}

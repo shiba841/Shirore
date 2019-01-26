@@ -15,6 +15,6 @@ public class CutTree : MonoBehaviour {
 	}
 
 	private void OnCollisionEnter(Collision other) {
-		Debug.Log(other.transform.name);
+		
 	}
 }
