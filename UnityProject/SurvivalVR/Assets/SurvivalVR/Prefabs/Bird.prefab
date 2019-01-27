@@ -111,8 +111,8 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1597742844426116}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -0.066, y: -0.852, z: -1.01}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4357924707387004}
@@ -193,7 +193,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1597742844426116}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3d35d2d63403ec041a9b23aca7439912, type: 3}
+  m_Script: {fileID: 11500000, guid: 9669ebf23a003fc429bbce9f06f5f7aa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   idealNumberOfBirds: 1
