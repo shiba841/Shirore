@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114663378170981072}
   - component: {fileID: 114621434498347198}
   - component: {fileID: 114687933777488528}
+  - component: {fileID: 114200860295562564}
   m_Layer: 0
   m_Name: Firewood_2
   m_TagString: Untagged
@@ -63,6 +64,7 @@ GameObject:
   - component: {fileID: 114775421483958962}
   - component: {fileID: 114215847000035662}
   - component: {fileID: 114459125757661020}
+  - component: {fileID: 114770143408411820}
   m_Layer: 0
   m_Name: Firewood_1
   m_TagString: Untagged
@@ -85,6 +87,7 @@ GameObject:
   - component: {fileID: 114472001152520714}
   - component: {fileID: 114912106409145598}
   - component: {fileID: 114490641143383932}
+  - component: {fileID: 114780374126755180}
   m_Layer: 0
   m_Name: Firewood_4
   m_TagString: Untagged
@@ -107,6 +110,7 @@ GameObject:
   - component: {fileID: 114457519530832266}
   - component: {fileID: 114544933012907688}
   - component: {fileID: 114995780582750686}
+  - component: {fileID: 114444054116672530}
   m_Layer: 0
   m_Name: Firewood_3
   m_TagString: Untagged
@@ -459,6 +463,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.097588636, y: 0.60299754, z: 0.11171518}
   m_Center: {x: -0.051205587, y: -0.000000059604645, z: 0.043496206}
+--- !u!114 &114200860295562564
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1195291371570706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e32312277a57d4baf502cc87fcda8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnTime: 0
 --- !u!114 &114215847000035662
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -515,6 +531,18 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   snapAttachEaseInCompleted: 0
   interactable: {fileID: 0}
+--- !u!114 &114444054116672530
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1949758813942910}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e32312277a57d4baf502cc87fcda8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnTime: 0
 --- !u!114 &114457519530832266
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -738,6 +766,18 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
+--- !u!114 &114770143408411820
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1570101809712648}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e32312277a57d4baf502cc87fcda8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnTime: 0
 --- !u!114 &114775421483958962
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -761,6 +801,18 @@ MonoBehaviour:
   handFollowTransformRotation: 0
   highlightOnHover: 1
   hideHighlight: []
+--- !u!114 &114780374126755180
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1760435675060840}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e32312277a57d4baf502cc87fcda8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnTime: 0
 --- !u!114 &114912106409145598
 MonoBehaviour:
   m_ObjectHideFlags: 1
