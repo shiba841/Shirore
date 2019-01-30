@@ -8,10 +8,22 @@ public class Burnable : MonoBehaviour {
 
 	[SerializeField] private float burnTime = 0f;
 
-	private void Update () {
-		
+	public float BurnTimeRemain { get; private set; }
+
+	private void Start () {
+		BurnTimeRemain = burnTime;
 	}
 
-	public float BurnTime { get; }
+	private void Update () {
+		BurnTimeRemain -= Time.deltaTime;
+
+		var scale = new Vector3(BurnTimeRemain/burnTime, 1, BurnTimeRemain/burnTime);
+		transform.localScale = scale;
+
+		if (BurnTimeRemain < 0) {
+			Destroy(this.gameObject);
+		}
+	}
+
 	
 }
