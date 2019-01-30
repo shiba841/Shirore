@@ -22,6 +22,7 @@ public class BurnableSource : MonoBehaviour {
 			if (burnTimeRemain < 0) {
 				Extinguish();
 			}
+			Debug.Log(burnTimeRemain);
 		}
 	}
 
@@ -32,6 +33,7 @@ public class BurnableSource : MonoBehaviour {
 		if (burnable != null) {
 			var burnRB = burnObj.GetComponent<Rigidbody>();
 			burnRB.constraints = RigidbodyConstraints.FreezeAll;
+			burnable.AttachedFire();
 
 			this.burnTimeRemain += burnable.BurnTimeRemain;
 		}
@@ -44,6 +46,7 @@ public class BurnableSource : MonoBehaviour {
 		if (burnable != null) {
 			var burnRB = burnObj.GetComponent<Rigidbody>();
 			burnRB.constraints = RigidbodyConstraints.None;
+			burnable.DetachedFire();
 
 			this.burnTimeRemain -= burnable.BurnTimeRemain;
 		}

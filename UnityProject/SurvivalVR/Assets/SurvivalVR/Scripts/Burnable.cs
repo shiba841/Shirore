@@ -6,24 +6,37 @@ using UnityEngine;
 
 public class Burnable : MonoBehaviour {
 
-	[SerializeField] private float burnTime = 0f;
+	[SerializeField] private float burnTime = 1f;
 
 	public float BurnTimeRemain { get; private set; }
 
+	private Vector3 orgScale;
+	private bool isBurning = false;
+
 	private void Start () {
 		BurnTimeRemain = burnTime;
+		orgScale = new Vector3(transform.localScale.x, transform.localScale.y, transform.localScale.z);
 	}
 
 	private void Update () {
-		BurnTimeRemain -= Time.deltaTime;
+		if (isBurning) {
+			BurnTimeRemain -= Time.deltaTime;
 
-		var scale = new Vector3(BurnTimeRemain/burnTime, 1, BurnTimeRemain/burnTime);
-		transform.localScale = scale;
+			var scaleRatio = BurnTimeRemain / burnTime;
+			var scale = new Vector3(orgScale.x * scaleRatio, orgScale.y, orgScale.z * scaleRatio);
+			transform.localScale = scale;
 
-		if (BurnTimeRemain < 0) {
-			Destroy(this.gameObject);
+			if (BurnTimeRemain < 0) {
+				Destroy(this.gameObject);
+			}
 		}
 	}
 
-	
+	public void AttachedFire () {
+		isBurning = true;
+	}
+
+	public void DetachedFire () {
+		isBurning = false;
+	}
 }
