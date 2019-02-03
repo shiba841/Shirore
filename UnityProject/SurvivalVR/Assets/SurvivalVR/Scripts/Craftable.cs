@@ -17,6 +17,7 @@ public class Craftable : MonoBehaviour {
 	}
 
 	[SerializeField] CraftableClass[] craft;
+	[SerializeField] bool needProcess;
 	[SerializeField, Space(15)] GameObject craftItem;
 
 	List<GameObject> attachedMaterials;
@@ -64,7 +65,7 @@ public class Craftable : MonoBehaviour {
 	}
 
 	private void IsCraftCompleted () {
-		if (craft.Length == attachedMaterials.Count && Processed) {
+		if (craft.Length == attachedMaterials.Count && (Processed || !needProcess)) {
 			var crafted = Instantiate(craftItem, this.transform.position, this.transform.rotation);
 			Destroy(this.gameObject);
 		}
