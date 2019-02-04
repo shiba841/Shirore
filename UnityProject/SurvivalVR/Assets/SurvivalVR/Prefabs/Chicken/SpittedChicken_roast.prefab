@@ -53,13 +53,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4027521629120558}
-  - component: {fileID: 114868872196390144}
+  - component: {fileID: 114208089511549584}
   - component: {fileID: 114592620673727162}
   - component: {fileID: 65881299483406116}
   - component: {fileID: 136123400075217986}
   - component: {fileID: 54160941367147062}
   - component: {fileID: 114481249915293062}
   - component: {fileID: 114892479966790964}
+  - component: {fileID: 114868872196390144}
   m_Layer: 0
   m_Name: SpittedChicken_roast
   m_TagString: Untagged
@@ -219,6 +220,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 0.1725812, y: 0.0998334, z: 0.19284388}
   m_Center: {x: 0, y: 0, z: 0.08}
+--- !u!114 &114208089511549584
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933944683181188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a7e32312277a57d4baf502cc87fcda8f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  burnTime: 100
 --- !u!114 &114481249915293062
 MonoBehaviour:
   m_ObjectHideFlags: 1
