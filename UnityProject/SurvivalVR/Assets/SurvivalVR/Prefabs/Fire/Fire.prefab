@@ -60,6 +60,7 @@ GameObject:
   - component: {fileID: 114453462249540704}
   - component: {fileID: 198646220108108710}
   - component: {fileID: 82653443890971576}
+  - component: {fileID: 65959564029763272}
   m_Layer: 0
   m_Name: Fire
   m_TagString: Fire
@@ -74,7 +75,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1514310114002446}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.53, y: 1.021, z: 0}
+  m_LocalPosition: {x: -0.2542591, y: 1.185, z: 0.26502037}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4790892685950094}
@@ -149,16 +150,28 @@ MeshFilter:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1514310114002446}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!65 &65959564029763272
+BoxCollider:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1514310114002446}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 0.5, y: 0.8, z: 0.5}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!82 &82653443890971576
 AudioSource:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1514310114002446}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 537536d187c5b2d409581d8728efa012, type: 3}
+  m_audioClip: {fileID: 8300000, guid: cd5e209d06e32864fbe8bb2f2a739846, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
