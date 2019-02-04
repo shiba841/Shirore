@@ -21,7 +21,12 @@ ModelImporter:
     4300000: Vine
     4300002: Stone
     4300004: Wood
-  externalObjects: {}
+  externalObjects:
+  - first:
+      type: UnityEngine:Material
+      assembly: UnityEngine.CoreModule
+      name: WoodAxe
+    second: {fileID: 2100000, guid: 737981a1b7d0dfb42812922c057f5488, type: 2}
   materials:
     importMaterials: 1
     materialName: 0
