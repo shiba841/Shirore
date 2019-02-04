@@ -21,8 +21,6 @@ GameObject:
   - component: {fileID: 4805475088047860}
   - component: {fileID: 33181586581664632}
   - component: {fileID: 23847787289703262}
-  - component: {fileID: 65463362130813676}
-  - component: {fileID: 114935743577069544}
   m_Layer: 0
   m_Name: chicken_roast
   m_TagString: Untagged
@@ -40,7 +38,6 @@ GameObject:
   - component: {fileID: 4322438545712166}
   - component: {fileID: 33772274521957596}
   - component: {fileID: 23378855909631750}
-  - component: {fileID: 136578032755652622}
   m_Layer: 0
   m_Name: spit
   m_TagString: Untagged
@@ -56,7 +53,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4027521629120558}
+  - component: {fileID: 114868872196390144}
   - component: {fileID: 114592620673727162}
+  - component: {fileID: 65881299483406116}
+  - component: {fileID: 136123400075217986}
   - component: {fileID: 54160941367147062}
   - component: {fileID: 114481249915293062}
   - component: {fileID: 114892479966790964}
@@ -90,7 +90,7 @@ Transform:
   m_GameObject: {fileID: 1711895006092046}
   m_LocalRotation: {x: 0.7071068, y: 0, z: 0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4027521629120558}
   m_RootOrder: 1
@@ -102,7 +102,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1466975088595560}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4027521629120558}
@@ -207,18 +207,18 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65463362130813676
+--- !u!65 &65881299483406116
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466975088595560}
+  m_GameObject: {fileID: 1933944683181188}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1725812, y: 0.0998334, z: 0.19284388}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.08}
 --- !u!114 &114481249915293062
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -250,12 +250,25 @@ MonoBehaviour:
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: 1
-  useHandObjectAttachmentPoint: 0
+  useHandObjectAttachmentPoint: 1
   handFollowTransform: {fileID: 0}
   handFollowTransformPosition: 0
   handFollowTransformRotation: 0
   highlightOnHover: 1
   hideHighlight: []
+--- !u!114 &114868872196390144
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1933944683181188}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5840f7c67c0249e4290aeabed614ff65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 008
+  name: spitted_chicken_roast
 --- !u!114 &114892479966790964
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -267,7 +280,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 84
+  attachmentFlags: 44
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
@@ -312,29 +325,16 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   snapAttachEaseInCompleted: 0
   interactable: {fileID: 0}
---- !u!114 &114935743577069544
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1466975088595560}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5840f7c67c0249e4290aeabed614ff65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 006
-  name: chicken_roast
---- !u!136 &136578032755652622
+--- !u!136 &136123400075217986
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1711895006092046}
+  m_GameObject: {fileID: 1933944683181188}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.0049999966
-  m_Height: 0.37429103
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.012854348, z: 0.000000015133995}
+  m_Radius: 0.005
+  m_Height: 0.5617043
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: -0.021734416}

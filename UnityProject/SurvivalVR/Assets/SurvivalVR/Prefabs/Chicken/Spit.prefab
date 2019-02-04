@@ -223,7 +223,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1536259530890324}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4045622751821208}
@@ -281,7 +281,7 @@ Transform:
   m_GameObject: {fileID: 1313034179839228}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children:
   - {fileID: 4797022371887348}
   m_Father: {fileID: 4071076252127240}
@@ -739,12 +739,12 @@ MonoBehaviour:
   activateActionSetOnAttach: {fileID: 0}
   hideHandOnAttach: 0
   hideSkeletonOnAttach: 0
-  hideControllerOnAttach: 1
+  hideControllerOnAttach: 0
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: 1
   useHandObjectAttachmentPoint: 1
   handFollowTransform: {fileID: 0}
-  handFollowTransformPosition: 1
+  handFollowTransformPosition: 0
   handFollowTransformRotation: 0
   highlightOnHover: 1
   hideHighlight: []
@@ -812,6 +812,6 @@ CapsuleCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   m_Radius: 0.005
-  m_Height: 0.75742424
+  m_Height: 0.5617043
   m_Direction: 2
-  m_Center: {x: 0, y: 0, z: -0.027948678}
+  m_Center: {x: 0, y: 0, z: -0.021734416}

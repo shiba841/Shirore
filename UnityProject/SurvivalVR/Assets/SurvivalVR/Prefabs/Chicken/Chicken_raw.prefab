@@ -146,7 +146,7 @@ MonoBehaviour:
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: -1
-  useHandObjectAttachmentPoint: 0
+  useHandObjectAttachmentPoint: 1
   handFollowTransform: {fileID: 0}
   handFollowTransformPosition: 0
   handFollowTransformRotation: 0

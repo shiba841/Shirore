@@ -19,10 +19,14 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 4262434747634732}
+  - component: {fileID: 114051629769886858}
   - component: {fileID: 114371454858255954}
+  - component: {fileID: 65407342866735950}
+  - component: {fileID: 136557363344945534}
   - component: {fileID: 54527006989405928}
   - component: {fileID: 114093963737556296}
   - component: {fileID: 114510226499454128}
+  - component: {fileID: 114048445505651280}
   m_Layer: 0
   m_Name: SpittedChicken_raw
   m_TagString: Untagged
@@ -40,7 +44,6 @@ GameObject:
   - component: {fileID: 4991400420469548}
   - component: {fileID: 33635760017988604}
   - component: {fileID: 23306843282118892}
-  - component: {fileID: 136580541389051916}
   m_Layer: 0
   m_Name: spit
   m_TagString: Untagged
@@ -58,8 +61,6 @@ GameObject:
   - component: {fileID: 4722121154911812}
   - component: {fileID: 33989595667957368}
   - component: {fileID: 23009623931051332}
-  - component: {fileID: 65155054165356116}
-  - component: {fileID: 114542732358506084}
   - component: {fileID: 114617890727446932}
   m_Layer: 0
   m_Name: chicken_raw
@@ -75,7 +76,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1614970925301732}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0.231, y: 0.774, z: 0.808}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4722121154911812}
@@ -90,7 +91,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1813139604783380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 0, z: 0.08}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4262434747634732}
@@ -104,7 +105,7 @@ Transform:
   m_GameObject: {fileID: 1664110225888698}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 2, z: 1}
+  m_LocalScale: {x: 1, y: 1.5, z: 1}
   m_Children: []
   m_Father: {fileID: 4262434747634732}
   m_RootOrder: 1
@@ -208,18 +209,45 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
---- !u!65 &65155054165356116
+--- !u!65 &65407342866735950
 BoxCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1813139604783380}
+  m_GameObject: {fileID: 1614970925301732}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
   m_Size: {x: 0.1725812, y: 0.0998334, z: 0.19284388}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 0, z: 0.08}
+--- !u!114 &114048445505651280
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614970925301732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5840f7c67c0249e4290aeabed614ff65, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  id: 007
+  name: spitted_chicken_raw
+--- !u!114 &114051629769886858
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1614970925301732}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4267d419c642544d9ec9bd5b32fd930, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  steakTime: 50
+  SteakedItem: {fileID: 1933944683181188, guid: 47806f7797e31b4409c01557e414b786,
+    type: 2}
 --- !u!114 &114093963737556296
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -251,7 +279,7 @@ MonoBehaviour:
   hideControllerOnAttach: 0
   handAnimationOnPickup: 0
   setRangeOfMotionOnPickup: 1
-  useHandObjectAttachmentPoint: 0
+  useHandObjectAttachmentPoint: 1
   handFollowTransform: {fileID: 0}
   handFollowTransformPosition: 0
   handFollowTransformRotation: 0
@@ -268,7 +296,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ffefbea063cab884ca33e5a449e5c22c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  attachmentFlags: 84
+  attachmentFlags: 44
   attachmentOffset: {fileID: 0}
   catchingSpeedThreshold: -1
   releaseVelocityStyle: 1
@@ -313,19 +341,6 @@ MonoBehaviour:
       Culture=neutral, PublicKeyToken=null
   snapAttachEaseInCompleted: 0
   interactable: {fileID: 0}
---- !u!114 &114542732358506084
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1813139604783380}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5840f7c67c0249e4290aeabed614ff65, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  id: 005
-  name: chicken_raw
 --- !u!114 &114617890727446932
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -340,16 +355,16 @@ MonoBehaviour:
   velocityAverageFrames: 5
   angularVelocityAverageFrames: 11
   estimateOnAwake: 0
---- !u!136 &136580541389051916
+--- !u!136 &136557363344945534
 CapsuleCollider:
   m_ObjectHideFlags: 1
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1664110225888698}
+  m_GameObject: {fileID: 1614970925301732}
   m_Material: {fileID: 0}
   m_IsTrigger: 0
   m_Enabled: 1
-  m_Radius: 0.0049999966
-  m_Height: 0.37429103
-  m_Direction: 1
-  m_Center: {x: 0, y: -0.012854348, z: 0}
+  m_Radius: 0.005
+  m_Height: 0.5617043
+  m_Direction: 2
+  m_Center: {x: 0, y: 0, z: -0.021734416}

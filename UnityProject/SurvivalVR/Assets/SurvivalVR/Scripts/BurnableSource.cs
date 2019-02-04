@@ -22,7 +22,6 @@ public class BurnableSource : MonoBehaviour {
 			if (burnTimeRemain < 0) {
 				Extinguish();
 			}
-			Debug.Log(burnTimeRemain);
 		}
 	}
 
