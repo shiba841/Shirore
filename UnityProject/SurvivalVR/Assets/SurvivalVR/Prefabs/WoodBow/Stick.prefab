@@ -732,7 +732,7 @@ MonoBehaviour:
   - material: {fileID: 1173858698370848, guid: 70ca44193564b1f479c74f985d347cf5, type: 2}
     attachPoint: {fileID: 4394374954519652}
   needProcess: 1
-  craftItem: {fileID: 1053000061331902, guid: 090a175d544c9eb4696845a965e0f1fb, type: 2}
+  craftItem: {fileID: 1267904046057062, guid: a89c2ef237b89b547ab6908c5bcba3dc, type: 2}
 --- !u!114 &114190212425035230
 MonoBehaviour:
   m_ObjectHideFlags: 1

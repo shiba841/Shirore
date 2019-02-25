@@ -90,7 +90,6 @@ GameObject:
   - component: {fileID: 4574187186778072}
   - component: {fileID: 205020549873057682}
   - component: {fileID: 54613324445095182}
-  - component: {fileID: 114088775623283176}
   - component: {fileID: 114888963367435560}
   m_Layer: 0
   m_Name: Tree
@@ -149,9 +148,9 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1550406404194326}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: -0.36491805, y: -0.44585252, z: -3.249}
+  m_LocalScale: {x: 0.3, y: 0.5, z: 0.3}
   m_Children:
   - {fileID: 4157270050885740}
   - {fileID: 4770334520163828}
@@ -344,17 +343,6 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 32
   m_CollisionDetection: 0
---- !u!114 &114088775623283176
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1550406404194326}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d1fbee87f10e48143bfb2c08c0fde2f3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114888963367435560
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -368,7 +356,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   objType: 1
   maxDurability: 100
-  particle: {fileID: 0}
+  particleObj: {fileID: 1774890196930908, guid: b4c5a5d78d65b8a43a23e7b943e0edbe,
+    type: 2}
 --- !u!136 &136556398567196780
 CapsuleCollider:
   m_ObjectHideFlags: 1

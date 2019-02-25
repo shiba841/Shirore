@@ -245,7 +245,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f4267d419c642544d9ec9bd5b32fd930, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  steakTime: 50
+  steakTime: 15
   SteakedItem: {fileID: 1933944683181188, guid: 47806f7797e31b4409c01557e414b786,
     type: 2}
 --- !u!114 &114093963737556296

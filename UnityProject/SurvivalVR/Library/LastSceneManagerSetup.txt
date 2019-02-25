@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/SurvivalVR/Scenes/TestScene.unity
+- path: Assets/SurvivalVR/Scenes/demo.unity
   isLoaded: 1
   isActive: 1

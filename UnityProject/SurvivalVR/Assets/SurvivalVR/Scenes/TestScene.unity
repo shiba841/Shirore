@@ -5226,6 +5226,11 @@ Prefab:
       propertyPath: m_Name
       value: Firewood_org (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 114319542793074776, guid: 3328994f0247fc547bc2a1f30ea2940e,
+        type: 2}
+      propertyPath: attachmentFlags
+      value: 44
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3328994f0247fc547bc2a1f30ea2940e, type: 2}
   m_IsPrefabAsset: 0
@@ -5533,6 +5538,11 @@ Prefab:
     - target: {fileID: 4504331758882344, guid: e7d118c097f572b46bf10edae3ecfceb, type: 2}
       propertyPath: m_RootOrder
       value: 14
+      objectReference: {fileID: 0}
+    - target: {fileID: 114800361936357138, guid: e7d118c097f572b46bf10edae3ecfceb,
+        type: 2}
+      propertyPath: attachmentFlags
+      value: 44
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e7d118c097f572b46bf10edae3ecfceb, type: 2}
@@ -5881,6 +5891,11 @@ Prefab:
       propertyPath: m_Name
       value: Firewood_org (2)
       objectReference: {fileID: 0}
+    - target: {fileID: 114319542793074776, guid: 3328994f0247fc547bc2a1f30ea2940e,
+        type: 2}
+      propertyPath: attachmentFlags
+      value: 44
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 3328994f0247fc547bc2a1f30ea2940e, type: 2}
   m_IsPrefabAsset: 0
@@ -5988,6 +6003,11 @@ Prefab:
       propertyPath: m_Materials.Array.data[0]
       value: 
       objectReference: {fileID: 2100000, guid: 737981a1b7d0dfb42812922c057f5488, type: 2}
+    - target: {fileID: 114301684869657188, guid: 260c76fa726206344a3c2bd7c7db41fc,
+        type: 2}
+      propertyPath: attachmentFlags
+      value: 44
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 260c76fa726206344a3c2bd7c7db41fc, type: 2}
   m_IsPrefabAsset: 0
