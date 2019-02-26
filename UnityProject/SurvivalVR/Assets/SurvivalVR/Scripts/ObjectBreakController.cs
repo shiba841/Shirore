@@ -14,6 +14,10 @@ public class ObjectBreakController : MonoBehaviour {
 	public GameObject particleObj;
 
 	private ParticleSystem particle;
+	private float destroyTime = 7f;
+	// Avoid consecutive hit
+	private float coolTime = 0.5f;
+	private bool hittable = true;
 
 
 	// Use this for initialization
@@ -22,13 +26,18 @@ public class ObjectBreakController : MonoBehaviour {
 		particle = particleObj.GetComponent<ParticleSystem>();
 	}
 	
+	private float hitTime;
 	// Update is called once per frame
 	void Update () {
-		
+		if (Time.time - hitTime > coolTime) {
+			hittable = true;
+		}
 	}
 
 	private void OnCollisionEnter (Collision other) {
-		if (other.transform.root.tag.Equals("Tool")) {
+		if (hittable && other.transform.root.tag.Equals("Tool")) {
+			hitTime = Time.time;
+			hittable = false;
 			foreach (var point in other.contacts) {
 				PlayParticle(point.point);
 			}
@@ -48,7 +57,7 @@ public class ObjectBreakController : MonoBehaviour {
 		var rb = this.GetComponent<Rigidbody>();
 		rb.isKinematic = false;
 		rb.useGravity = true;
-		Destroy(this.gameObject, 7f);
+		Destroy(this.gameObject, destroyTime);
 	}
 
 	private void PlayParticle (Vector3 hitPos) {
