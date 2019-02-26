@@ -5362,24 +5362,20 @@ Prefab:
       propertyPath: m_RootOrder
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 1657497063127306, guid: 7e4ade23d80afe742b968c5815ee925a, type: 2}
-      propertyPath: m_Name
-      value: Player
-      objectReference: {fileID: 0}
-    - target: {fileID: 20761921095954500, guid: 7e4ade23d80afe742b968c5815ee925a,
+    - target: {fileID: 23062019657762090, guid: 7e4ade23d80afe742b968c5815ee925a,
         type: 2}
-      propertyPath: m_BackGroundColor.r
-      value: 0.748
+      propertyPath: m_Enabled
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 20761921095954500, guid: 7e4ade23d80afe742b968c5815ee925a,
+    - target: {fileID: 54216560598343374, guid: 7e4ade23d80afe742b968c5815ee925a,
         type: 2}
-      propertyPath: m_BackGroundColor.g
-      value: 0.8572
+      propertyPath: m_IsKinematic
+      value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 20761921095954500, guid: 7e4ade23d80afe742b968c5815ee925a,
+    - target: {fileID: 65090541196935070, guid: 7e4ade23d80afe742b968c5815ee925a,
         type: 2}
-      propertyPath: m_BackGroundColor.b
-      value: 1
+      propertyPath: m_IsTrigger
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 7e4ade23d80afe742b968c5815ee925a, type: 2}
